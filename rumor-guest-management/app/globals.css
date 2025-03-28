@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+:root {
+  /* Base colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Gray scale */
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+
+  /* Primary colors (Indigo) */
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-primary-300: #a5b4fc;
+  --color-primary-400: #818cf8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
+  --color-primary-800: #3730a3;
+  --color-primary-900: #312e81;
+
+  /* Status colors */
+  --color-success-50: #f0fdf4;
+  --color-success-500: #22c55e;
+  --color-success-700: #15803d;
+  
+  --color-error-50: #fef2f2;
+  --color-error-500: #ef4444;
+  --color-error-700: #b91c1c;
+  
+  --color-warning-50: #fffbeb;
+  --color-warning-500: #f59e0b;
+  --color-warning-700: #b45309;
+  
+  --color-info-50: #eff6ff;
+  --color-info-500: #3b82f6;
+  --color-info-700: #1d4ed8;
+
+  /* Semantic tokens - Light mode defaults */
+  --background: var(--color-white);
+  --foreground: var(--color-gray-900);
+  
+  --background-subtle: var(--color-gray-50);
+  --background-muted: var(--color-gray-100);
+  --background-strong: var(--color-gray-200);
+  
+  --text-primary: var(--color-gray-900);
+  --text-secondary: var(--color-gray-600);
+  --text-muted: var(--color-gray-500);
+  --text-inverted: var(--color-white);
+  
+  --border-color: var(--color-gray-200);
+  --border-color-strong: var(--color-gray-300);
+  
+  --primary-default: var(--color-primary-600);
+  --primary-hover: var(--color-primary-700);
+  --primary-muted: var(--color-primary-100);
+  --primary-strong: var(--color-primary-800);
+
+  /* Status tokens */
+  --status-success-bg: var(--color-success-50);
+  --status-success-text: var(--color-success-700);
+  --status-error-bg: var(--color-error-50);
+  --status-error-text: var(--color-error-700);
+  --status-warning-bg: var(--color-warning-50);
+  --status-warning-text: var(--color-warning-700);
+  --status-info-bg: var(--color-info-50);
+  --status-info-text: var(--color-info-700);
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--color-gray-900);
+    --foreground: var(--color-gray-50);
+    
+    --background-subtle: var(--color-gray-800);
+    --background-muted: var(--color-gray-800);
+    --background-strong: var(--color-gray-700);
+    
+    --text-primary: var(--color-gray-50);
+    --text-secondary: var(--color-gray-300);
+    --text-muted: var(--color-gray-400);
+    --text-inverted: var(--color-gray-900);
+    
+    --border-color: var(--color-gray-700);
+    --border-color-strong: var(--color-gray-600);
+    
+    --primary-default: var(--color-primary-500);
+    --primary-hover: var(--color-primary-400);
+    --primary-muted: var(--color-primary-900);
+    --primary-strong: var(--color-primary-300);
+
+    /* Status tokens - Dark mode */
+    --status-success-bg: color-mix(in srgb, var(--color-success-700) 20%, transparent);
+    --status-success-text: var(--color-success-500);
+    --status-error-bg: color-mix(in srgb, var(--color-error-700) 20%, transparent);
+    --status-error-text: var(--color-error-500);
+    --status-warning-bg: color-mix(in srgb, var(--color-warning-700) 20%, transparent);
+    --status-warning-text: var(--color-warning-500);
+    --status-info-bg: color-mix(in srgb, var(--color-info-700) 20%, transparent);
+    --status-info-text: var(--color-info-500);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+}
+
+/* Utility classes */
+.bg-app {
+  background-color: var(--background);
+}
+
+.bg-subtle {
+  background-color: var(--background-subtle);
+}
+
+.bg-muted {
+  background-color: var(--background-muted);
+}
+
+.bg-strong {
+  background-color: var(--background-strong);
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-inverted {
+  color: var(--text-inverted);
+}
+
+.border-default {
+  border-color: var(--border-color);
+}
+
+.border-strong {
+  border-color: var(--border-color-strong);
+}
+
+.bg-primary {
+  background-color: var(--primary-default);
+}
+
+.bg-primary-hover {
+  background-color: var(--primary-hover);
+}
+
+.bg-primary-muted {
+  background-color: var(--primary-muted);
+}
+
+.text-primary-strong {
+  color: var(--primary-strong);
+}
