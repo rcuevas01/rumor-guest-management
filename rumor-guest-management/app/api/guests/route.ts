@@ -3,7 +3,7 @@ import { Guest } from '@/models/guest';
 import { v4 as uuidv4 } from 'uuid';
 import { generateMockGuests } from './mockData';
 
-var MOCK_GUESTS = generateMockGuests(100);
+var MOCK_GUESTS = generateMockGuests(10000);
 
 
 
