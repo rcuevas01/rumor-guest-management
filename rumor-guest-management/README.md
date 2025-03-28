@@ -1,4 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Guest Management Dashboard
+
+A Next.js dashboard for managing event guests with filtering and chat.
+
+## Quick Start
+
+```bash
+npm install
+npm run dev
+```
+
+Visit `http://localhost:3000`
+
+## Architecture
+
+- **Frontend**: Next.js 14 (App Router) + TypeScript + Tailwind CSS
+- **State**: Zustand for global state management
+- **Theme**: CSS Variables + Tailwind
+- **Components**: Modular design with shared components
+
+## Key Features
+
+- Server-side sorting and filtering
+- Real-time chat with guests
+- Responsive design
+- Type-safe development
+
+## Design Decisions
+
+- Zustand over Context API for simpler state management
+- Server-side operations for better performance with large datasets
+- If I had more time would add padding + extra validation to forms
 
 ## Getting Started
 
